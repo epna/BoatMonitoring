@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><declare-styleable name="GaugeView">
+    <attr name="totalNoOfPointers" format="integer" />
+    <attr name="pointerMaxHeight" format="integer" />
+    <attr name="pointerMinHeight" format="integer" />
+</declare-styleable>
+    <declare-styleable name="boatMonitoring">
+        <attr name="speed" format="float" />
+        <attr name="gasLevel" format="float" />
+        <attr name="tourMinuteB" format="float" />
+        <attr name="tourMinuteT" format="float" />
+        <attr name="consoInstB" format="float" />
+        <attr name="consoInstT" format="float" />
+        <attr name="temperatureB" format="float" />
+        <attr name="temperatureT" format="float" />
+        <attr name="batterieB" format="float" />
+        <attr name="batterieT" format="float" />
+        <attr name="heureMoteurB" format="float" />
+        <attr name="heureMoteurT" format="float" />
+
+    </declare-styleable>
+    <declare-styleable name="compas_view">
+        <attr name="cap" format="float"/>
+    </declare-styleable>
+
+
+
+
+</resources>

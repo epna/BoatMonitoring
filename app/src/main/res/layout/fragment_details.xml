@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#212121"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--        Images du haut depth et temp -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+            <!--            depth-->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:elevation="19dp"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@color/cardview_dark_background"
+                android:layout_margin="16dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Media -->
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_margin="16dp"
+                        android:maxWidth="50dp"
+                        android:maxHeight="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/bckimg"
+                        app:srcCompat="@drawable/depth"
+                        android:scaleType="centerInside"
+                        />
+                    <TextView
+                        android:id="@+id/depth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text=""
+                        android:textSize="30sp"
+                        android:layout_margin="8dp"
+                        android:textColor="@color/colorTexte"
+                        android:fontFamily="@font/digital"
+                        android:textAlignment="center"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        />
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <!--            temperature -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:elevation="19dp"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@color/cardview_dark_background"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Media -->
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_margin="16dp"
+                        android:maxWidth="50dp"
+                        android:maxHeight="50dp"
+                        android:background="@drawable/bckimg"                        android:layout_height="50dp"
+                        app:srcCompat="@drawable/tempwater"
+                        android:scaleType="centerInside"
+
+                        />
+                    <TextView
+                        android:id="@+id/temperature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text=""
+                        android:textSize="30sp"
+                        android:layout_margin="8dp"
+                        android:textColor="@color/colorTexte"
+                        android:fontFamily="@font/digital"
+                        android:textAlignment="center"
+                        />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_margin="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/bcklinear"
+            >
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/distancetodest"
+                    android:layout_marginStart="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/digital"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="@color/colorTexte"
+                    android:textSize="20sp"
+                    android:layout_weight=".25"/>
+
+                <TextView
+                    android:layout_marginStart="16dp"
+                    android:id="@+id/distancetowp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/digital"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight=".25"
+                    android:textColor="@color/colorTexte"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:layout_weight=".25"
+                    android:id="@+id/positionN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/digital"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="@color/colorTexte"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:layout_marginStart="16dp"
+                    android:id="@+id/positionE"
+                    android:layout_weight=".25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/digital"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="@color/colorTexte"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/needle"
+                    android:scaleType="centerInside"
+                    android:adjustViewBounds="true"
+                    android:layout_width="50dp"
+                    android:layout_height="80dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/needle6" />
+                <TextView
+                    android:layout_width="150dp"
+                    android:textColor="@color/colorTexte"
+                    android:textSize="15sp"
+                    android:id="@+id/cap"
+                    android:gravity="center"
+                    android:text=""
+                    android:paddingTop="66dp"
+                    android:layout_centerInParent="true"
+                    android:layout_height="wrap_content"/>
+
+            <com.boat.boatmonitoring.compass_view
+                android:layout_alignParentEnd="true"
+                android:id="@+id/compasscust"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                />
+            </RelativeLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="16dp"
+            android:background="@drawable/bcklinear"
+            android:padding="10dp">
+            <TextView
+                android:id="@+id/lib1"
+                android:text="Essence disponible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/colorTexte"
+                android:textSize="20sp"
+                />
+            <TextView
+                android:id="@+id/value1"
+                android:text="value1"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/digital"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/colorTexte"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/lib2"
+                android:layout_below="@+id/lib1"
+                android:text="Conso. distance"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/colorTexte"
+                android:textSize="20sp"
+                />
+            <TextView
+                android:id="@+id/value2"
+                android:layout_alignBottom="@id/lib2"
+                android:text="value2"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/digital"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/colorTexte"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/lib3"
+                android:text="Conso. instantanée"
+                android:layout_below="@id/lib2"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/colorTexte"
+                android:textSize="20sp"
+                />
+            <TextView
+                android:id="@+id/value3"
+                android:text="value3"
+                android:layout_alignBottom="@id/lib3"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/digital"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/colorTexte"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/lib4"
+                android:layout_below="@id/lib3"
+                android:text="Autonomie distance"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/colorTexte"
+                android:textSize="20sp"
+                />
+            <TextView
+                android:id="@+id/value4"
+                android:layout_alignBottom="@id/lib4"
+                android:text="value4"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/digital"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/colorTexte"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/lib5"
+                android:layout_below="@id/lib4"
+                android:text="Autonomie temps"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/colorTexte"
+                android:textSize="20sp"
+                />
+            <TextView
+                android:id="@+id/value5"
+                android:layout_alignBottom="@id/lib5"
+                android:text="value5"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/digital"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/colorTexte"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/lib6"
+                android:text="Distance parcourue"
+                android:layout_below="@id/lib5"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/colorTexte"
+                android:textSize="20sp"
+                />
+            <TextView
+                android:id="@+id/value6"
+                android:text="value6"
+                android:layout_alignBottom="@id/lib6"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/digital"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/colorTexte"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/lib7"
+                android:layout_below="@id/lib6"
+                android:text="Conso. dist. parcourue"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/colorTexte"
+                android:textSize="20sp"
+                />
+            <TextView
+                android:id="@+id/value7"
+                android:text="value7"
+                android:layout_alignBottom="@id/lib7"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/digital"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/colorTexte"
+                android:textSize="20sp" />
+            <!--            Les 7 lignes -->
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

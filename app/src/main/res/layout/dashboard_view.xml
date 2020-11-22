@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    tools:context=".BlankFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <com.boat.boatmonitoring.view_dashboard
+        android:id="@+id/mdashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="#212121"
+        android:elevation="12dp"
+        custom:gasLevel="0"
+        custom:speed="0"
+        custom:consoInstB="0"
+        custom:consoInstT="0"
+        custom:tourMinuteB="0"
+        custom:tourMinuteT="0"
+        custom:temperatureB="0"
+        custom:temperatureT="0"
+        custom:heureMoteurB="0"
+        custom:heureMoteurT="0"
+        custom:batterieB="0"
+        custom:batterieT="0"/>
+
+</FrameLayout>
